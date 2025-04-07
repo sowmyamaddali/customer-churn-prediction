@@ -21,3 +21,24 @@ Performed exploratory data analysis `churn_EDA.ipynb` to understand customer beh
    - Customers using Bank Withdrawal as payment method churn more than others
    - Users with low tenure and low total charges churn more frequently
    - Fiber optic internet users have a higher churn rate compared to DSL or Cable
+
+
+## Data Cleaning & Preprocessing
+- Dropped irrelevant or redundant features like `customer_id`, `under_30`, `quarter`, `churn_category`, and `churn_reason` in `churn_DataPreProcessing.ipynb`
+- Converted all binary features (Yes/No) and gender (Male/Female) to 1/0
+- One-hot encoded multi-class categorical features:
+    - internet_type
+    - contract
+    - payment_method
+- Created two separate datasets:
+    - `linear_data.csv`: for linear models (one-hot encoded with `drop_first=True)
+    - `tree_data.csv`: for tree-based models (full one-hot encoding)
+
+
+## Handling Class Imbalance
+- Observed class imbalance: ~73% No Churn vs. ~27% Yes Churn in `churn_resampling.ipynb`
+- Compared and implemented 3 resampling strategies (on training data only):
+    - **Random UnderSampling:** reduced majority class
+    - **Random OverSampling:** duplicated minority class
+    - **SMOTE:** used to generate synthetic samples for the minority class
+- Selected **SMOTE** as the preferred method for modeling
