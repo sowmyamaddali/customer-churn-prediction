@@ -42,3 +42,16 @@ Performed exploratory data analysis `churn_EDA.ipynb` to understand customer beh
     - **Random OverSampling:** duplicated minority class
     - **SMOTE:** used to generate synthetic samples for the minority class
 - Selected **SMOTE** as the preferred method for modeling
+
+
+## Model 1: Logistic Regression (Baseline)
+This is the first of several models used to predict customer churn.
+- Trained on a SMOTE-balanced dataset to address class imbalance.
+- Dropped multicollinear features based on a correlation matrix
+- Used Logistic Regression as a baseline linear model due to its interpretability and strong performance
+### Evaluation on Real-World Test Set
+- ROC AUC Score: 0.97 (excellent class separability)
+- Accuracy: 93%
+- Precision / Recall (No Churn): 95% / 95%
+- Precision / Recall (Churn): 87% / 87%
+- F1-score: Balanced across both classes
