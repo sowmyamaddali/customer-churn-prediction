@@ -55,3 +55,29 @@ This is the first of several models used to predict customer churn.
 - Precision / Recall (No Churn): 95% / 95%
 - Precision / Recall (Churn): 87% / 87%
 - F1-score: Balanced across both classes
+
+## Model 2: Ridge Classifier (L2 Regression)
+- Built on logistic regression by introducing L2 regularization
+- Helped reduce potential multicollinearity and slightly improved performance
+- Precision for churn class improved from 0.87 -> 0.92
+- Overall accuracy increased from 93% -> 95%
+- Retained all features but shrunk coefficient magnitudes for better generalization
+
+## Model 3: Lasso Regression (L1 Regression)
+- Applied L1 regularization to perform automatic feature selection
+- Shrunk less important feature coefficients to zero
+- Highlighted the most impactful features for churn:
+    - `satisfaction_score`
+    - `online_security`
+    - `phone_service`
+    - `internet_service`
+- Improved model interpretability and reduced complexity
+- Ideal when the goal is to identify key drivers of churn
+
+
+## Conclusion: Linear Models
+1. All three models (Logistic, Ridge, Lasso) performed well on the SMOTE-balanced dataset
+2. **Logistic Regression:** Strong baseline with excellent ROC AUC (0.97)
+3. **Ridge Classifier:** Slightly better precision and acuuracy, useful when all features matter
+4. **Lasso Regression:** Best for understanding which features matter most, by reducing noise
+5. These models laid the foundation for building interpretable churn prediction systems
