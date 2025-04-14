@@ -81,3 +81,15 @@ This is the first of several models used to predict customer churn.
 3. **Ridge Classifier:** Slightly better precision and acuuracy, useful when all features matter
 4. **Lasso Regression:** Best for understanding which features matter most, by reducing noise
 5. These models laid the foundation for building interpretable churn prediction systems
+
+
+## Model 4: Decision Tree Classifier
+- Implemented a Decision Tree Classifier to predict customer churn
+- Utilized the SMOTE-balanced dataset to address class imbalance
+- Achieved the following performance metrics on the test set:
+    - Accuracy: 95%
+    - Precision: 0.96 (No Churn), 0.90 (Churn)
+    - Recall: 0.96 (No Churn), 0.90 (Churn)
+    - F1-Score: 0.96 (No Churn), 0.90 (Churn)
+    - ROC AUC Score: 0.93
+- The model demonstrated balanced performance across both classes.
