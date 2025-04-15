@@ -93,3 +93,14 @@ This is the first of several models used to predict customer churn.
     - F1-Score: 0.96 (No Churn), 0.90 (Churn)
     - ROC AUC Score: 0.93
 - The model demonstrated balanced performance across both classes.
+
+
+## Model 5: RandomForest Classifier
+- Trained a Random Forest model to predict customer churn
+- Achieved the strongest performance among all the models so far:
+    - Accuracy: 95%
+    - Precision: 0.98 (Churn), 0.95 (No Churn)
+    - Recall: 0.84 (Churn), 0.99 (No Churn)
+    - F1-score: 0.91 (Churn), 0.97 (No Churn)
+    - ROC AUC Score: 0.98
+- Very few false positives and high class separation, making it ideal for customer churn prioritization.
