@@ -115,3 +115,20 @@ This is the first of several models used to predict customer churn.
   - **ROC AUC Score**: 0.99
 - Excellent balance between precision and recall, making it highly suitable for churn prediction tasks.
 
+## Conclusion: Linear Models
+1. Tree-based models (Decision Tree, Random Forest, XGBoost) performed well without requiring SMOTE balancing
+2. **Decision Tree Classifier:** Provided a good baseline but slightly overfitted on training data
+3. **Random Forest Classifier:** Improved stability and performance, especially in precision (0.98) with ROC AUC of 0.98
+4. **XGBoost Classifier:** Best overall performance with highest accuracy (0.96) and ROC AUC (0.99), showing excellent generalization
+5. These models are powerful for capturing non-linear relationships and identifying key churn patterns in the data
+
+## Final Thoughts
+This project successfully built an end-to-end machine learning pipeline to predict customer churn using a realistic Telco dataset. Through thorough exploratory data analysis, strategic preprocessing, handling class imbalance, and evaluating multiple linear and tree-based models, I was able to:
+- Achieve a high-performing XGBoost model with 96% accuracy and 0.99 ROC AUC.
+- Understand the key drivers of customer churn such as contract type, tenure, internet service, and payment method.
+- Compare models not only on performance but also on interpretability and feature influence.
+
+This pipeline can now be extended or deployed for:
+- Real-time churn prediction on new customer data
+- Business dashboards highlighting high-risk customers
+- A/B testing retention strategies based on churn scores
