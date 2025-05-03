@@ -104,3 +104,13 @@ This is the first of several models used to predict customer churn.
     - F1-score: 0.91 (Churn), 0.97 (No Churn)
     - ROC AUC Score: 0.98
 - Very few false positives and high class separation, making it ideal for customer churn prioritization.
+
+## Model 6: XGBoost Classifier
+- Trained an XGBoost Classifier using the cleaned, imbalanced tree dataset.
+- Achieved the **best model performance** across all models evaluated:
+  - **Accuracy**: 96%
+  - **Precision**: 0.95 (Churn), 0.96 (No Churn)
+  - **Recall**: 0.90 (Churn), 0.98 (No Churn)
+  - **F1-score**: 0.92 (Churn), 0.97 (No Churn)
+  - **ROC AUC Score**: 0.99
+- Excellent balance between precision and recall, making it highly suitable for churn prediction tasks.
