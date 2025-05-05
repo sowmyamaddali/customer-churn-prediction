@@ -115,7 +115,7 @@ This is the first of several models used to predict customer churn.
   - **ROC AUC Score**: 0.99
 - Excellent balance between precision and recall, making it highly suitable for churn prediction tasks.
 
-## Conclusion: Linear Models
+## Conclusion: Tree-based Models
 1. Tree-based models (Decision Tree, Random Forest, XGBoost) performed well without requiring SMOTE balancing
 2. **Decision Tree Classifier:** Provided a good baseline but slightly overfitted on training data
 3. **Random Forest Classifier:** Improved stability and performance, especially in precision (0.98) with ROC AUC of 0.98
